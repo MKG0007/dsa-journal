@@ -1,1 +1,27 @@
+hashing :- it the way of pre-storing and fetching the value in small amount of time.
+for applying hashing --> we use array
+1)in case of integer(we create a arr of size of maxElement of the given array to store the occurrence bu using the element as index in the frequency array)
+
+note:- 
+we can't create array more than the size of "1e7"
+inside the function (we can create array of size 1e7)
+but globaly(we can create array of size 1e8)
+
+2)in case of character(we can use the array too and as the character has limited number of characters we don't have to create a large array) 
+for only lowercase(26)-->index(ch - 'a')
+for both l-uppercase(237)--->index(ch);
+
+
+stl(standard template library)
+we have "map<dataType1 , dataType2> name"
+storing , fetching  TC(log n)--> for every case
+
+other one is unordered_map<dataType1 , dataType2> name
+stroing , fetching TC(O(1))--> in case of avg , best case 
+
+note:-
+map stored element in increasing order but unordered_map stored randomely.
+
+
+
 
