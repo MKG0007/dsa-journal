@@ -18,9 +18,15 @@ storing , fetching  TC(log n)--> for every case
 
 other one is unordered_map<dataType1 , dataType2> name
 stroing , fetching TC(O(1))--> in case of avg , best case 
+but in case of worst case(O(n))--> due to collosion of the elements which happens very rarly
+
+why collision heppens : as hash map follow division method to do the functions and when we trying to store the larger value 
+internally modle the value to make it shorter to store but same modulo can be occure that makes collision 
+
 
 note:-
 map stored element in increasing order but unordered_map stored randomely.
+
 
 
 
