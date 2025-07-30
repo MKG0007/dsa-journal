@@ -71,6 +71,31 @@ if not refresh the counter and prev pointer.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-  optimize approach--> in this we going to use unordered_map--->initialized with the whole array
+  optimize approach--> in this we going to use unordered_map--->initialized with the whole array and find the first member of every sequence and start counting from it only(because we don't have to wast the time to count form every element of the array)
 
-and 
+  code:--->
+  class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        int size = nums.size();
+        unordered_set<int> s;//set inwhih 
+
+        for(int i = 0 ; i<size ; i++){
+            s.insert(nums[i]);
+        }
+        int ans = 0;
+        for(int ele : s){
+            if(s.find(ele-1) == s.end()){
+                int count = 1;
+                int num = ele+1;
+                while(s.find(num) != s.end()){
+                    num++;
+                    count++;
+                }
+                ans = max(ans , count);
+            }
+
+        }
+        return ans;
+    }
+};
