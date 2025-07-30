@@ -78,14 +78,15 @@ if not refresh the counter and prev pointer.
 public:
     int longestConsecutive(vector<int>& nums) {
         int size = nums.size();
-        unordered_set<int> s;//set inwhih 
+        unordered_set<int> s;//set is use to  remove the duplicate element and to search the element faster 
 
         for(int i = 0 ; i<size ; i++){
-            s.insert(nums[i]);
+            s.insert(nums[i]);//initialising it with the element 
         }
         int ans = 0;
         for(int ele : s){
-            if(s.find(ele-1) == s.end()){
+            if(s.find(ele-1) == s.end()){//check that any other small element of its sequence is is present or not
+              //if present don't do anything and if not then start counting  the sequence length by using loops 
                 int count = 1;
                 int num = ele+1;
                 while(s.find(num) != s.end()){
